@@ -1,4 +1,4 @@
-# `react-use-clipboard`
+# 📋 `react-use-clipboard`
 
 > React hook that provides copy to clipboard functionality.
 
