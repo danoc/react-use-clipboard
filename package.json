@@ -1,0 +1,78 @@
+{
+  "name": "react-use-clipboard",
+  "description": "React hook that provides copy to clipboard functionality.",
+  "version": "0.0.0",
+  "author": "Daniel O'Connor <daniel@danoc.me>",
+  "license": "MIT",
+  "main": "dist/cjs/index.jsx",
+  "module": "dist/es/index.jsx",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "yarn test:eslint && yarn test:prettier",
+    "test:eslint": "eslint . --ignore-path .gitignore --ext .jsx --ext .js",
+    "test:jest": "jest --coverage",
+    "test:prettier": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --list-different",
+    "prepublishOnly": "rm -rf dist && rollup -c=./rollup.config.js",
+    "format": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --write",
+    "release": "git checkout master && git pull && yarn test && yarn publish && git push --follow-tags"
+  },
+  "dependencies": {
+    "copy-to-clipboard": "^3.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.0.0",
+    "babel-loader": "^8.0.4",
+    "codecov": "^3.1.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-hooks": "^0.0.0",
+    "husky": "^1.1.4",
+    "jest": "^24.0.0",
+    "prettier": "1.16.1",
+    "pretty-quick": "^1.8.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-testing-library": "^5.2.3",
+    "rollup": "^1.1.0",
+    "rollup-plugin-babel": "^4.3.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.0.0",
+    "react": "^16.8.0-alpha.0",
+    "react-dom": "^16.8.0-alpha.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danoc/react-use-clipboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danoc/react-use-clipboard/issues"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "clipboard",
+    "hooks"
+  ],
+  "homepage": "https://github.com/danoc/react-use-clipboard#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
