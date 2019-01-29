@@ -24,7 +24,7 @@ Here's how to use `ClickableBox` to make a clickable SVG:
 import useClipboard from "react-use-clipboard";
 
 function App() {
-  const [isCopied, setCopied] = useCopyClipboard("Text to copy");
+  const [isCopied, setCopied] = useClipboard("Text to copy");
 
   return (
     <button onClick={setCopied}>
