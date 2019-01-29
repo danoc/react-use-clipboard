@@ -1,0 +1,5 @@
+yarn.lock
+dist
+.git
+.cache
+coverage
