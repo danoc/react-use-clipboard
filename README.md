@@ -1,5 +1,7 @@
 # 📋 `react-use-clipboard`
 
+[![NPM version](https://badgen.net/npm/v/react-use-clipboard)](https://www.npmjs.com/package/react-use-clipboard) [![Build status](https://badgen.net/travis/danoc/react-use-clipboard)](https://travis-ci.com/danoc/react-use-clipboard) [![Code coverage](https://badgen.net/codecov/c/github/danoc/react-use-clipboard)](https://codecov.io/gh/danoc/react-use-clipboard) [![Bundle size](https://badgen.net/bundlephobia/min/react-use-clipboard?label=size)](https://bundlephobia.com/result?p=react-use-clipboard) [![Bundle size](https://badgen.net/bundlephobia/minzip/react-use-clipboard?label=gzip%20size)](https://bundlephobia.com/result?p=react-use-clipboard)
+
 > React hook that provides copy to clipboard functionality.
 
 ## Install
