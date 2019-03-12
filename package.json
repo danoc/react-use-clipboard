@@ -4,8 +4,9 @@
   "version": "0.1.1",
   "author": "Daniel O'Connor <daniel@danoc.me>",
   "license": "MIT",
-  "main": "dist/cjs/index.jsx",
-  "module": "dist/es/index.jsx",
+  "main": "dist/react-use-clipboard.js",
+  "module": "dist/react-use-clipboard.mjs",
+  "source": "src/index.jsx",
   "files": [
     "dist"
   ],
@@ -14,7 +15,7 @@
     "test:eslint": "eslint . --ignore-path .gitignore --ext .jsx --ext .js",
     "test:jest": "jest --coverage",
     "test:prettier": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --list-different",
-    "prepublishOnly": "rm -rf dist && rollup -c=./rollup.config.js",
+    "prepublishOnly": "microbundle --format es,cjs",
     "format": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --write",
     "release": "git checkout master && git pull && yarn test && yarn publish && git push --follow-tags"
   },
@@ -39,14 +40,13 @@
     "eslint-plugin-react-hooks": "^1.0.1",
     "husky": "^1.1.4",
     "jest": "^24.1.0",
+    "microbundle": "0.11.0",
     "prettier": "1.16.4",
     "pretty-quick": "^1.8.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-testing-library": "^6.0.0",
-    "rollup": "^1.1.0",
-    "rollup-plugin-babel": "^4.3.0"
+    "react-testing-library": "^6.0.0"
   },
   "peerDependencies": {
     "prop-types": "^15.0.0",
