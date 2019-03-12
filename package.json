@@ -17,7 +17,7 @@
     "test:prettier": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --list-different",
     "prepublishOnly": "microbundle --format es,cjs",
     "format": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --write",
-    "release": "git checkout master && git pull && yarn test && yarn publish && git push --follow-tags"
+    "release": "np"
   },
   "dependencies": {
     "copy-to-clipboard": "^3.0.8"
@@ -41,6 +41,7 @@
     "husky": "^1.1.4",
     "jest": "^24.1.0",
     "microbundle": "0.11.0",
+    "np": "^4.0.2",
     "prettier": "1.16.4",
     "pretty-quick": "^1.8.0",
     "prop-types": "^15.6.2",
