@@ -4,8 +4,8 @@
   "version": "0.1.2",
   "author": "Daniel O'Connor <daniel@danoc.me>",
   "license": "MIT",
-  "main": "dist/react-use-clipboard.js",
-  "module": "dist/react-use-clipboard.mjs",
+  "main": "dist/react-use-clipboard.cjs.js",
+  "module": "dist/react-use-clipboard.es.js",
   "source": "src/index.jsx",
   "files": [
     "dist"
