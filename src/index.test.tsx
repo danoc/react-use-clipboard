@@ -1,6 +1,6 @@
 import React from "react";
-import { cleanup, render, fireEvent } from "@testing-library/react";
-import useClipboard from "./index";
+import { cleanup, fireEvent, render } from "@testing-library/react";
+import useClipboard from "./";
 
 afterEach(cleanup);
 
@@ -9,7 +9,6 @@ test("display sucess message if the copy worked", () => {
     const [isCopied, setCopied] = useClipboard("Text to copy");
 
     return (
-      // eslint-disable-next-line react/button-has-type
       <button onClick={setCopied} data-testid="btn-example">
         {isCopied ? "Yes" : "Nope"}
       </button>

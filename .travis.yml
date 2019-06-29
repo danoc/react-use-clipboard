@@ -2,3 +2,5 @@ language: node_js
 script:
   - yarn test
   - codecov
+before_install:
+  - npm install -g yarn
