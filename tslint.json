@@ -1,0 +1,18 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-react-hooks",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": ["**/node_modules/**"]
+  },
+  "jsRules": {},
+  "rules": {
+    "ordered-imports": false,
+    "react-hooks-nesting": "error"
+  },
+  "rulesDirectory": []
+}
