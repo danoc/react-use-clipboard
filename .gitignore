@@ -1,6 +1,7 @@
 # Custom
 .cache
 dist
+.rts2_cache_*
 
 # Logs
 logs
