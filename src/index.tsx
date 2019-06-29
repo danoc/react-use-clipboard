@@ -1,7 +1,7 @@
 import { useState } from "react";
 import copy from "copy-to-clipboard";
 
-export default function useCopyClipboard(text) {
+export default function useCopyClipboard(text: string): [boolean, () => void] {
   const [isCopied, setIsCopied] = useState(false);
 
   return [

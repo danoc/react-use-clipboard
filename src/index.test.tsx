@@ -1,6 +1,6 @@
 import React from "react";
-import { cleanup, render, fireEvent } from "@testing-library/react";
-import useClipboard from "./index";
+import { cleanup, fireEvent, render } from "@testing-library/react";
+import useClipboard from "./";
 
 afterEach(cleanup);
 
