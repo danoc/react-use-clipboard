@@ -36,4 +36,23 @@ function App() {
 }
 ```
 
+You can reset the `isCopied` value after a certain amount of time with the `successDuration` option.
+
+```jsx
+import useClipboard from "react-use-clipboard";
+
+function App() {
+  const [isCopied, setCopied] = useClipboard("Text to copy", {
+    // `isCopied` will go back to `false` after 1000ms.
+    successDuration: 1000
+  });
+
+  return (
+    <button onClick={setCopied}>
+      Was it copied? {isCopied ? "Yes! 👍" : "Nope! 👎"}
+    </button>
+  );
+}
+```
+
 This package only works in versions of React that support Hooks.
