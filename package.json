@@ -7,7 +7,7 @@
   "main": "dist/react-use-clipboard.js",
   "umd:main": "dist/react-use-clipboard.umd.js",
   "module": "dist/react-use-clipboard.m.js",
-  "types": "dist/react-use-clipboard.d.ts",
+  "types": "dist/index.d.ts",
   "source": "src/index.tsx",
   "files": [
     "dist"
