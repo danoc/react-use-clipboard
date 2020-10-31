@@ -4,6 +4,6 @@
  *
  * https://www.npmjs.com/package/copy-to-clipboard
  */
-module.exports = text => {
+module.exports = (text) => {
   return !!text;
 };

@@ -32,7 +32,7 @@ describe("successDuration", () => {
 
     const Component = () => {
       const [isCopied, setCopied] = useClipboard("Text to copy", {
-        successDuration
+        successDuration,
       });
 
       return (

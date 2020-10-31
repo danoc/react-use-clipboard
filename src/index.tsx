@@ -33,6 +33,6 @@ export default function useCopyClipboard(
     () => {
       const didCopy = copy(text);
       setIsCopied(didCopy);
-    }
+    },
   ];
 }
