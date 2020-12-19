@@ -1,5 +1,11 @@
 # react-use-clipboard
 
+## 1.0.5
+
+### Patch Changes
+
+- 670e76c: Upgrade microbundle, remove unecessary babel packages, and ship a modern version of the dist code with `exports` in package.json
+
 ## 1.0.4
 
 ### Patch Changes
