@@ -1,7 +1,7 @@
 {
   "name": "react-use-clipboard",
   "description": "React hook that provides copy to clipboard functionality.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Daniel O'Connor <daniel@danoc.me>",
   "license": "MIT",
   "main": "dist/react-use-clipboard.js",
