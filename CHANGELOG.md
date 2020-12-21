@@ -1,5 +1,11 @@
 # react-use-clipboard
 
+## 1.0.6
+
+### Patch Changes
+
+- af9d220: Fix path for TypeScript definitions
+
 ## 1.0.5
 
 ### Patch Changes
