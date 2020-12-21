@@ -9,7 +9,7 @@
   "exports": "./dist/react-use-clipboard.modern.js",
   "module": "./dist/react-use-clipboard.module.js",
   "unpkg": "./dist/react-use-clipboard.umd.js",
-  "types": "./dist/react-use-clipboard.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
