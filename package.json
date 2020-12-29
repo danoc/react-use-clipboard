@@ -6,7 +6,6 @@
   "license": "MIT",
   "source": "./src/index.tsx",
   "main": "./dist/react-use-clipboard.js",
-  "exports": "./dist/react-use-clipboard.modern.js",
   "module": "./dist/react-use-clipboard.module.js",
   "unpkg": "./dist/react-use-clipboard.umd.js",
   "types": "./dist/index.d.ts",
