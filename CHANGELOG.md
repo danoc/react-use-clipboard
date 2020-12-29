@@ -1,5 +1,11 @@
 # react-use-clipboard
 
+## 1.0.7
+
+### Patch Changes
+
+- a0162ac: Remove modern JS from dist to work with Next.js
+
 ## 1.0.6
 
 ### Patch Changes
