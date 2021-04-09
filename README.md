@@ -26,7 +26,7 @@ Here's how to use `react-use-clipboard`:
 import useClipboard from "react-use-clipboard";
 
 function App() {
-  const [isCopied, setCopied] = useClipboard("Text to copy");
+  const [isCopied, setCopied] = useClipboard();
 
   return (
     <button onClick={() => setCopied("Text to copy")}>
@@ -42,7 +42,7 @@ You can reset the `isCopied` value after a certain amount of time with the `succ
 import useClipboard from "react-use-clipboard";
 
 function App() {
-  const [isCopied, setCopied] = useClipboard("Text to copy", {
+  const [isCopied, setCopied] = useClipboard({
     // `isCopied` will go back to `false` after 1000ms.
     successDuration: 1000,
   });
