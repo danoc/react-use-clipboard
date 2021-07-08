@@ -11,6 +11,7 @@
   },
   "jsRules": {},
   "rules": {
+    "jsx-no-lambda": false,
     "ordered-imports": false,
     "react-hooks-nesting": "error"
   },

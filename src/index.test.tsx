@@ -25,6 +25,62 @@ test("display sucess message if the copy worked", () => {
   expect(button.textContent).toBe("Yes");
 });
 
+describe("text passed in as argument to `setCopied`", () => {
+  test("can copy text without options", () => {
+    const Component = () => {
+      const [isCopied, setCopied] = useClipboard();
+
+      return (
+        <button
+          onClick={() => {
+            setCopied("Text to copy");
+          }}
+          data-testid="btn-example"
+        >
+          {isCopied ? "Yes" : "Nope"}
+        </button>
+      );
+    };
+
+    const { getByTestId } = render(<Component />);
+    const button = getByTestId("btn-example");
+
+    expect(button.textContent).toBe("Nope");
+
+    fireEvent.click(button);
+
+    expect(button.textContent).toBe("Yes");
+  });
+
+  test("can copy text with options", () => {
+    const Component = () => {
+      const [isCopied, setCopied] = useClipboard({
+        successDuration: 1000,
+      });
+
+      return (
+        <button
+          onClick={() => {
+            setCopied("Text to copy");
+          }}
+          data-testid="btn-example"
+        >
+          {isCopied ? "Yes" : "Nope"}
+        </button>
+      );
+    };
+
+    const { getByTestId } = render(<Component />);
+    const button = getByTestId("btn-example");
+
+    expect(button.textContent).toBe("Nope");
+
+    fireEvent.click(button);
+
+    expect(button.textContent).toBe("Yes");
+  });
+});
+
 describe("successDuration", () => {
   test("`isCopied` becomes false after `successDuration` time ellapses", () => {
     jest.useFakeTimers();
