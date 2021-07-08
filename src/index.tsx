@@ -43,7 +43,7 @@ export default function useCopyClipboard(...args: any): any {
       const textToCopy = text || defaultText;
 
       if (!textToCopy) {
-        throw Error("Did not provide text to copy to the clipboard.");
+        throw Error("Didn't provide text for `react-use-clipbaord` to copy.");
       }
 
       const didCopy = copy(textToCopy);
