@@ -17,7 +17,7 @@ const ExampleA = () => {
 /**
  * Provides the text to copy to `setCopied`.
  */
- const ExampleB = () => {
+const ExampleB = () => {
   const [isCopied, setCopied] = useClipboard({
     // `isCopied` will go back to `false` after 1000ms.
     successDuration: 1000,

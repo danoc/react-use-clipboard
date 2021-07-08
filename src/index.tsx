@@ -19,7 +19,7 @@ export default function useCopyClipboard(
 ): [boolean, (text: string) => void];
 
 export default function useCopyClipboard(...args: any): any {
-  const defaultText = typeof args[0] === "string" ? args[0] : null;
+  const defaultText = typeof args[0] === "string" ? args[0] : undefined;
   const options = defaultText ? args[1] : args[0];
 
   const [isCopied, setIsCopied] = useState(false);
@@ -39,8 +39,14 @@ export default function useCopyClipboard(...args: any): any {
 
   return [
     isCopied,
-    (text: string) => {
-      const didCopy = copy(text);
+    (text?: string) => {
+      const textToCopy = text || defaultText;
+
+      if (!textToCopy) {
+        throw Error("Did not provide text to copy to the clipboard.");
+      }
+
+      const didCopy = copy(textToCopy);
       setIsCopied(didCopy);
     },
   ];

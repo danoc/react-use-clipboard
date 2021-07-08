@@ -26,7 +26,7 @@ test("display sucess message if the copy worked", () => {
 });
 
 describe("text passed in as argument to `setCopied`", () => {
-  it("can copy text without options", () => {
+  test("can copy text without options", () => {
     const Component = () => {
       const [isCopied, setCopied] = useClipboard();
 
@@ -52,7 +52,7 @@ describe("text passed in as argument to `setCopied`", () => {
     expect(button.textContent).toBe("Yes");
   });
 
-  it("can copy text with options", () => {
+  test("can copy text with options", () => {
     const Component = () => {
       const [isCopied, setCopied] = useClipboard({
         successDuration: 1000,
