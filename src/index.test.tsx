@@ -31,7 +31,12 @@ describe("text passed in as argument to `setCopied`", () => {
       const [isCopied, setCopied] = useClipboard();
 
       return (
-        <button onClick={() => {setCopied("Text to copy")}} data-testid="btn-example">
+        <button
+          onClick={() => {
+            setCopied("Text to copy");
+          }}
+          data-testid="btn-example"
+        >
           {isCopied ? "Yes" : "Nope"}
         </button>
       );
@@ -45,16 +50,21 @@ describe("text passed in as argument to `setCopied`", () => {
     fireEvent.click(button);
 
     expect(button.textContent).toBe("Yes");
-  })
+  });
 
   it("can copy text with options", () => {
     const Component = () => {
       const [isCopied, setCopied] = useClipboard({
-        successDuration: 1000
+        successDuration: 1000,
       });
 
       return (
-        <button onClick={() => {setCopied("Text to copy")}} data-testid="btn-example">
+        <button
+          onClick={() => {
+            setCopied("Text to copy");
+          }}
+          data-testid="btn-example"
+        >
           {isCopied ? "Yes" : "Nope"}
         </button>
       );
@@ -68,7 +78,7 @@ describe("text passed in as argument to `setCopied`", () => {
     fireEvent.click(button);
 
     expect(button.textContent).toBe("Yes");
-  })
+  });
 });
 
 describe("successDuration", () => {

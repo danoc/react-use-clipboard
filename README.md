@@ -45,7 +45,11 @@ function App() {
   const [isCopied, setCopied] = useClipboard();
 
   return (
-    <button onClick={() => { setCopied("Text to copy") }}>
+    <button
+      onClick={() => {
+        setCopied("Text to copy");
+      }}
+    >
       Was it copied? {isCopied ? "Yes! 👍" : "Nope! 👎"}
     </button>
   );

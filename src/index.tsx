@@ -9,12 +9,17 @@ interface IOptions {
   successDuration?: number;
 }
 
-export default function useCopyClipboard(text:string, options?:IOptions): [boolean, () => void];
+export default function useCopyClipboard(
+  text: string,
+  options?: IOptions
+): [boolean, () => void];
 
-export default function useCopyClipboard(options?:IOptions): [boolean, (text: string) => void];
+export default function useCopyClipboard(
+  options?: IOptions
+): [boolean, (text: string) => void];
 
 export default function useCopyClipboard(...args: any): any {
-  const defaultText = typeof args[0] === 'string' ? args[0] : null;
+  const defaultText = typeof args[0] === "string" ? args[0] : null;
   const options = defaultText ? args[1] : args[0];
 
   const [isCopied, setIsCopied] = useState(false);
