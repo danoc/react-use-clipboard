@@ -9,14 +9,12 @@
 You can install `react-use-clipboard` with NPM or Yarn.
 
 ```bash
-npm install react-use-clipboard --save-exact
+npm install react-use-clipboard
 ```
 
 ```bash
-yarn add react-use-clipboard --exact
+yarn add react-use-clipboard
 ```
-
-We encourage pinning the version number until `react-use-clipboard` reaches `1.0.0`. We may ship breaking changes in `0.x.x` versions.
 
 ## Usage
 
