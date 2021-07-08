@@ -20,7 +20,23 @@ We encourage pinning the version number until `react-use-clipboard` reaches `1.0
 
 ## Usage
 
-Here's how to use `react-use-clipboard`:
+There are two ways to use `react-use-clipboard`. You can define provide the text to be copied upfront:
+
+```jsx
+import useClipboard from "react-use-clipboard";
+
+function App() {
+  const [isCopied, setCopied] = useClipboard("Text to copy");
+
+  return (
+    <button onClick={setCopied}>
+      Was it copied? {isCopied ? "Yes! 👍" : "Nope! 👎"}
+    </button>
+  );
+}
+```
+
+Alternatively, you can provide the text when calling `setCopied`:
 
 ```jsx
 import useClipboard from "react-use-clipboard";
@@ -29,7 +45,7 @@ function App() {
   const [isCopied, setCopied] = useClipboard();
 
   return (
-    <button onClick={() => setCopied("Text to copy")}>
+    <button onClick={() => { setCopied("Text to copy") }}>
       Was it copied? {isCopied ? "Yes! 👍" : "Nope! 👎"}
     </button>
   );
@@ -42,13 +58,13 @@ You can reset the `isCopied` value after a certain amount of time with the `succ
 import useClipboard from "react-use-clipboard";
 
 function App() {
-  const [isCopied, setCopied] = useClipboard({
+  const [isCopied, setCopied] = useClipboard("Text to copy", {
     // `isCopied` will go back to `false` after 1000ms.
     successDuration: 1000,
   });
 
   return (
-    <button onClick={() => setCopied("Text to copy")}>
+    <button onClick={setCopied}>
       Was it copied? {isCopied ? "Yes! 👍" : "Nope! 👎"}
     </button>
   );
