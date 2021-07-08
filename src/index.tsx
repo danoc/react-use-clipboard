@@ -10,9 +10,8 @@ interface IOptions {
 }
 
 export default function useCopyClipboard(
-  text: string,
   options?: IOptions
-): [boolean, () => void] {
+): [boolean, (text: string) => void] {
   const [isCopied, setIsCopied] = useState(false);
   const successDuration = options && options.successDuration;
 
@@ -30,7 +29,7 @@ export default function useCopyClipboard(
 
   return [
     isCopied,
-    () => {
+    (text: string) => {
       const didCopy = copy(text);
       setIsCopied(didCopy);
     },

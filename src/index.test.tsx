@@ -6,10 +6,10 @@ afterEach(cleanup);
 
 test("display sucess message if the copy worked", () => {
   const Component = () => {
-    const [isCopied, setCopied] = useClipboard("Text to copy");
+    const [isCopied, setCopied] = useClipboard();
 
     return (
-      <button onClick={setCopied} data-testid="btn-example">
+      <button onClick={() => setCopied("Text to copy")} data-testid="btn-example">
         {isCopied ? "Yes" : "Nope"}
       </button>
     );
@@ -31,12 +31,12 @@ describe("successDuration", () => {
     const successDuration = 1000;
 
     const Component = () => {
-      const [isCopied, setCopied] = useClipboard("Text to copy", {
+      const [isCopied, setCopied] = useClipboard({
         successDuration,
       });
 
       return (
-        <button onClick={setCopied} data-testid="btn-example">
+        <button onClick={()=> setCopied("Text to copy")} data-testid="btn-example">
           {isCopied ? "Yes" : "Nope"}
         </button>
       );
@@ -68,10 +68,10 @@ describe("successDuration", () => {
     jest.useFakeTimers();
 
     const Component = () => {
-      const [isCopied, setCopied] = useClipboard("Text to copy", {});
+      const [isCopied, setCopied] = useClipboard({});
 
       return (
-        <button onClick={setCopied} data-testid="btn-example">
+        <button onClick={() => setCopied("Anything")} data-testid="btn-example">
           {isCopied ? "Yes" : "Nope"}
         </button>
       );
