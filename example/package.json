@@ -11,6 +11,6 @@
     "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-use-clipboard": "^1.0.6"
+    "react-use-clipboard": "^1.0.7"
   }
 }
