@@ -42,8 +42,8 @@
     "tslint-react-hooks": "^2.2.2"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17",
-    "react-dom": "^16.8.0 || ^17"
+    "react": "^16.8.0 || ^17 || ^18",
+    "react-dom": "^16.8.0 || ^17 || ^18"
   },
   "publishConfig": {
     "access": "public"
