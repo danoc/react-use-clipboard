@@ -1,5 +1,11 @@
 # react-use-clipboard
 
+## 1.0.8
+
+### Patch Changes
+
+- d6dd031: Indicate support for React 18 in the `peerDependencies`
+
 ## 1.0.7
 
 ### Patch Changes
