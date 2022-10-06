@@ -9,7 +9,7 @@ interface IOptions {
   successDuration?: number;
 }
 
-export default function useCopyClipboard(
+export default function useClipboard(
   text: string,
   options?: IOptions
 ): [boolean, () => void] {
