@@ -1,5 +1,11 @@
 # react-use-clipboard
 
+## 1.0.9
+
+### Patch Changes
+
+- b51078d: Rename the default export function to `useClipboard` instead of `useCopyClipboard` for consistency with the package name.
+
 ## 1.0.8
 
 ### Patch Changes
