@@ -13,13 +13,13 @@
     "dist"
   ],
   "scripts": {
-    "test": "yarn test:tslint && yarn test:jest && yarn test:prettier",
+    "test": "pnpm test:tslint && pnpm test:jest && pnpm test:prettier",
     "test:tslint": "tslint -c tslint.json --project tsconfig.json '**/*.{ts,tsx,js,jsx}'",
     "test:jest": "jest --coverage",
     "test:prettier": "prettier \"**/*.{ts,tsx,js,jsx,css,scss,json,md,mdx,html}\" --list-different",
     "format": "prettier \"**/*.{ts,tsx,js,jsx,css,scss,json,md,mdx,html}\" --write",
-    "build": "yarn microbundle",
-    "release": "rm -rf dist && yarn install --frozen-lockfile && yarn test && yarn build && yarn changeset publish"
+    "build": "pnpm microbundle",
+    "release": "rm -rf dist && pnpm install --frozen-lockfile && pnpm test && pnpm build && pnpm changeset publish"
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.1"
@@ -61,5 +61,6 @@
     "clipboard",
     "hooks"
   ],
-  "homepage": "https://github.com/danoc/react-use-clipboard#readme"
+  "homepage": "https://github.com/danoc/react-use-clipboard#readme",
+  "packageManager": "pnpm@7.14.0"
 }
