@@ -10,18 +10,10 @@ jobs:
     name: Create release PR or publish to NPM
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Setup environment with pnpm
+        uses: danoc/pnpm-setup-composite-action@v2
         with:
-          # Fetch all Git history so that Changesets can generate changelogs
-          # with the correct commits
-          fetch-depth: 0
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-      - name: Install dependencies
-        run: |
-          pnpm install --frozen-lockfile
+          checkout-fetch-depth: '0'
       - name: Create release PR or publish to NPM
         uses: changesets/action@master
         with:
