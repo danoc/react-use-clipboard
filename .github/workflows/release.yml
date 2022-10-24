@@ -15,7 +15,7 @@ jobs:
         with:
           checkout-fetch-depth: '0'
       - name: Create release PR or publish to NPM
-        uses: changesets/action@master
+        uses: changesets/action@v1
         with:
           publish: pnpm release
         env:
