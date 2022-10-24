@@ -6,14 +6,12 @@
 
 ## Install
 
-You can install `react-use-clipboard` with NPM or Yarn.
+You can install `react-use-clipboard` with npm, Yarn, or pnpm.
 
 ```bash
 npm install react-use-clipboard
-```
-
-```bash
 yarn add react-use-clipboard
+pnpm install react-use-clipboard
 ```
 
 ## Usage

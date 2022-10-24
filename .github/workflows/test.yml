@@ -7,62 +7,23 @@ jobs:
     name: Jest
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Restore Yarn cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Install dependencies
-        run: |
-          yarn install --frozen-lockfile
+      - name: Setup environment with pnpm
+        uses: danoc/pnpm-setup-composite-action@v1
       - name: Run Jest
-        run: |
-          yarn run test:jest
+        run: pnpm run test:jest
   tslint:
     name: TSLint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Restore Yarn cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Install dependencies
-        run: |
-          yarn install --frozen-lockfile
+      - name: Setup environment with pnpm
+        uses: danoc/pnpm-setup-composite-action@v1
       - name: Run TSLint
-        run: |
-          yarn run test:tslint
+        run: pnpm run test:tslint
   prettier:
     name: Prettier
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Restore Yarn cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Install dependencies
-        run: |
-          yarn install --frozen-lockfile
+      - name: Setup environment with pnpm
+        uses: danoc/pnpm-setup-composite-action@v1
       - name: Run Prettier
-        run: |
-          yarn run test:prettier
+        run: pnpm run test:prettier

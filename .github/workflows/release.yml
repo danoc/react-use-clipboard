@@ -15,23 +15,17 @@ jobs:
           # Fetch all Git history so that Changesets can generate changelogs
           # with the correct commits
           fetch-depth: 0
-      - name: Use Node.js 12.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-      - name: Restore Yarn cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+          node-version: 16.x
       - name: Install dependencies
         run: |
-          yarn install --frozen-lockfile
+          pnpm install --frozen-lockfile
       - name: Create release PR or publish to NPM
         uses: changesets/action@master
         with:
-          publish: yarn release
+          publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
