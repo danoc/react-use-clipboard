@@ -1,5 +1,11 @@
 # react-use-clipboard
 
+## 1.0.10
+
+### Patch Changes
+
+- 0bbd064: Uprade microbundle, the tool used for publishing
+
 ## 1.0.9
 
 ### Patch Changes
