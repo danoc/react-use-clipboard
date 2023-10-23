@@ -16,7 +16,7 @@ pnpm install react-use-clipboard
 
 ## Usage
 
-Here's how to use `react-use-clipboard`:
+There are two ways to use `react-use-clipboard`. You can define provide the text to be copied upfront:
 
 ```jsx
 import useClipboard from "react-use-clipboard";
@@ -26,6 +26,26 @@ function App() {
 
   return (
     <button onClick={setCopied}>
+      Was it copied? {isCopied ? "Yes! 👍" : "Nope! 👎"}
+    </button>
+  );
+}
+```
+
+Alternatively, you can provide the text when calling `setCopied`:
+
+```jsx
+import useClipboard from "react-use-clipboard";
+
+function App() {
+  const [isCopied, setCopied] = useClipboard();
+
+  return (
+    <button
+      onClick={() => {
+        setCopied("Text to copy");
+      }}
+    >
       Was it copied? {isCopied ? "Yes! 👍" : "Nope! 👎"}
     </button>
   );

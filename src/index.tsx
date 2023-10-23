@@ -12,7 +12,16 @@ interface IOptions {
 export default function useClipboard(
   text: string,
   options?: IOptions
-): [boolean, () => void] {
+): [boolean, () => void];
+
+export default function useCopyClipboard(
+  options?: IOptions
+): [boolean, (text: string) => void];
+
+export default function useCopyClipboard(...args: any): any {
+  const defaultText = typeof args[0] === "string" ? args[0] : undefined;
+  const options = defaultText ? args[1] : args[0];
+
   const [isCopied, setIsCopied] = useState(false);
   const successDuration = options && options.successDuration;
 
@@ -30,8 +39,14 @@ export default function useClipboard(
 
   return [
     isCopied,
-    () => {
-      const didCopy = copy(text);
+    (text?: string) => {
+      const textToCopy = text || defaultText;
+
+      if (!textToCopy) {
+        throw Error("Didn't provide text for `react-use-clipbaord` to copy.");
+      }
+
+      const didCopy = copy(textToCopy);
       setIsCopied(didCopy);
     },
   ];
